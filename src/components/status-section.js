@@ -3,8 +3,9 @@ import React from 'react';
 import GuessList from './guess-list';
 import GuessCount from './guess-count';
 import AuralStatus from './aural-status';
+import { connect } from 'react-redux';
 
-export default function StatusSection(props) {
+function StatusSection(props) {
   const { guesses, auralStatus } = props;
   const guessCount = guesses.length;
 
@@ -16,3 +17,5 @@ export default function StatusSection(props) {
     </section>
   );
 }
+
+export default connect()(StatusSection);

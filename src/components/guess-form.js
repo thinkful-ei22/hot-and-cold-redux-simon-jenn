@@ -1,8 +1,9 @@
 import React from 'react';
 
 import './guess-form.css';
+import { connect } from 'react-redux';
 
-export default class GuessForm extends React.Component {
+class GuessForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
 
@@ -41,3 +42,5 @@ export default class GuessForm extends React.Component {
     );
   }
 }
+
+export default connect()(GuessForm);

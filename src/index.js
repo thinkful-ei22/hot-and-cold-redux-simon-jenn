@@ -18,7 +18,7 @@ console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
-    <Game />,
+    <Game />
   </Provider>,
   document.getElementById('root')
 );

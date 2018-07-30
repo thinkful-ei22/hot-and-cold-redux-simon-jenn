@@ -14,7 +14,13 @@ function AuralStatus(props) {
     </p>
   );
 }
+function mapStateToProps(state){
+  return {
+    auralStatus: state.auralStatus,
+  };
+}
+export default connect(mapStateToProps)(AuralStatus);
 
-export default connect()(AuralStatus);
+
 
 

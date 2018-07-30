@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './info-section.css';
+import './styles/info-section.css';
 
 import { connect } from 'react-redux';
 

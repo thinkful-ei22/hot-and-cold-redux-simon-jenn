@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './feedback.css';
+import './styles/feedback.css';
 
 import { connect } from 'react-redux';
 
@@ -11,6 +11,7 @@ function Feedback(props) {
    * This is necessary for consistent aural feedback via aria-live.
   */
   const key = props.guessCount;
+  
 
   let guessAgain;
   if (key !== 0) {
@@ -29,4 +30,11 @@ function Feedback(props) {
   );
 }
 
-export default connect()(Feedback);
+function mapStateToProps(state){
+  return {
+    feedback: state.feedback,
+    guesses: state.guesses,
+    guessCount: state.guesses.length
+  };
+}
+export default connect(mapStateToProps)(Feedback);

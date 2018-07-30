@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './guess-count.css';
+import './styles/guess-count.css';
 
 import { connect } from 'react-redux';
 
@@ -15,4 +15,9 @@ function GuessCount(props) {
   );
 }
 
-export default connect()(GuessCount);
+function mapStateToProps(state){
+  return {
+    guessCount: state.guesses.length
+  };
+}
+export default connect(mapStateToProps)(GuessCount);

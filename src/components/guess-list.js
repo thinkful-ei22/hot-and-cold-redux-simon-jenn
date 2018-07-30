@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './guess-list.css';
+import './styles/guess-list.css';
 import { connect } from 'react-redux';
 
 function GuessList(props) {
@@ -17,4 +17,9 @@ function GuessList(props) {
   );
 }
 
-export default connect()(GuessList);
+function mapStateToProps(state){
+  return {
+    guesses: state.guesses
+  };
+}
+export default connect(mapStateToProps)(GuessList);
